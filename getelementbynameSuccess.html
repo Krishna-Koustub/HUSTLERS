@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script>
+            function checkIfAvailable(zip)
+{
+  let zones = ["46001","46002","46003","46102","46202"]
+  return( zones.indexOf(zip) >= 0 )
+}
+
+function validateZip()
+{
+  let zip = document.getElementById("zipCode").value;
+  let msg =""
+  if(checkIfAvailable(zip))
+    {
+      msg="Our service is available in this area!";
+    }
+   else
+     {
+       msg="Sorry; our service is not available in this area";
+     }
+    document.getElementById("msg").innerHTML = msg;
+}
+        </script>
+        <body>
+            <input type = 'button' value ="checkIfAvailable" onclick="checkIfAvailable()"/>
+            <input type = 'button' value = "validateZip"  onclick="validateZip()"/>
+        </body>
+    </head>
+</html>

@@ -1,0 +1,99 @@
+<html>
+  <head>
+    <script language="JavaScript">
+       function validate()
+       {
+           var i,l,flag;
+           flag = false;
+           alert('Inside validate');
+           l = document.shoppingCart.deleteItem.length;
+           alert('No of check boxes = ' + l);
+           for ( i = 0; i < l; i++ )
+           {
+               if ( document.shoppingCart.deleteItem[i].checked )
+               {
+                   flag = true;
+                   exit;
+               }
+           }
+           if ( flag == false )
+           {
+               alert('Please select one of the check boxes');
+               return false;
+           }
+           return true;
+      }
+   </script>
+  </head>
+
+  <body>
+     <br>
+     <h2>Shopping Cart</h2>
+     <br>
+     <form name="shoppingCart">
+         <table border="1">
+         <tr>
+             <th>Delete</th>
+             <th>SL No</th>
+             <th>Item Code</th>
+             <th>Book Title</th>
+             <th>Unit Rate ($)</th>
+             <th>Qty</th>
+             <th>Amount ($)</th>
+         </tr>
+
+         <tr>
+             <td><input type="checkbox" name="deleteItem" value="1001"></td>
+             <td>01</td>
+             <td>1001</td>
+             <td>Java Programming</td>
+             <td>20</td>
+             <td>1</td>
+             <td>20</td>
+        </tr>
+
+        <tr>
+             <td><input type="checkbox" name="deleteItem" value="1013"></td>
+             <td>02</td>
+             <td>1013</td>
+             <td>Linux Fundamentals</td>
+             <td>15</td>
+             <td>1</td>
+             <td>15</td>
+        </tr>
+
+        <tr>
+             <td><input type="checkbox" name="deleteItem" value="1020"></td>
+             <td>03</td>
+             <td>1020</td>
+             <td>Java Servlets and JSP</td>
+             <td>18</td>
+             <td>1</td>
+             <td>18</td>
+       </tr>
+
+       <tr>
+             <td><input type="checkbox" name="deleteItem" value="1030"></td>
+             <td>04</td>
+             <td>1030</td>
+             <td>HTML and JavaScript</td>
+             <td>12</td>
+             <td>1</td>
+             <td>12</td>
+       </tr>
+
+       <tr>
+             <td><input type="checkbox" name="deleteItem" value="1032"></td>
+             <td>05</td>
+             <td>1032</td>
+             <td>python programing </td>
+             <td>12</td>
+             <td>1</td>
+             <td>22</td>
+       </tr>
+       </table>
+    <br>
+    <input type="button" name="deleteBook" value="Delete" onClick="return validate()">
+    </form>
+  </body>
+</html>

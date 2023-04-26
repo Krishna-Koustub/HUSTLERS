@@ -1,0 +1,32 @@
+<html> 
+   <head> 
+   <script type="text/JavaScript" > 
+    function validate() 
+    { 
+         var dateRegExpr = /^\d{2}-\d{2}-\d{4}$/;
+         var date = document.dateForm.date.value; 
+         if ( !dateRegExpr.test(date) ) 
+         { 
+                 alert('Failed'); 
+         } 
+         else 
+         { 
+                alert('Passed'); 
+         }
+    } 
+   </script> 
+   </head>
+
+   <body> 
+   <center> 
+   <form name="dateForm" onsubmit="return validate()" > 
+   Date :  
+   <input type="text" name="date" size="10" /> 
+   <br > 
+   <br > 
+   <input type="submit" value="Submit" /> 
+   </form> 
+   </center> 
+   </body>
+
+</html>

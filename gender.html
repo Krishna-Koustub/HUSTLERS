@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html> 
+
+   <head> 
+      <script> 
+         function validate() 
+         { 
+            alert('inside validate'); 
+            var l,i,flag; 
+            flag = false; 
+            l = document.genderForm.gender.length; 
+            alert('No of radio buttons = ' + l);
+
+            for ( i = 0; i < l; i++ ) 
+            { 
+               if ( document.genderForm.gender[i].checked ) 
+               { 
+                 flag = true; 
+                 exit; 
+               } 
+            } 
+
+            if ( flag == false ) 
+            { 
+               alert('Please select the gender'); 
+               return false; 
+            } 
+            return true; 
+        } 
+     </script>  
+   </head>
+
+   <body style="text-align: center; background-color: cyan" > 
+      <br>
+      <br>
+      <form name="genderForm" method="get" action="GenderSuccess.html"> 
+          Gender : 
+          <input type="radio" name="gender" value="M">Male 
+          <input type="radio" name="gender" value="F">Female 
+
+         <br> 
+         <br>
+         <input type="submit" value="Submit" onClick = "return validate()"> 
+       </form> 
+    </body> 
+</html>

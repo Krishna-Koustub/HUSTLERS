@@ -1,0 +1,21 @@
+<html>
+  <head>
+     <script language="JavaScript">
+        function doNewWindow()
+        {
+            alert('Opens a new popup window');
+            window.open("Second.html","This is a new popup window",
+                 "height=500, width=600, menubar=yes, toolbar=yes");
+        }
+     </script>
+   </head>
+
+   <body>
+      <br>
+      <br>
+      <center>
+          <input type="button" name="newWindow" value="Open a new window" 
+                  onClick="return doNewWindow()">
+      </center>
+   </body>
+</html>

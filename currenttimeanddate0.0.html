@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <script>
+       function doCurrentDate()
+       {
+           document.getElementById("date").innerHTML = getDate();
+       }
+
+       function getDate() {
+           var date = new Date();
+           var day, month, year;
+
+           day = date.getDate().toString();
+           day = day.length > 1 ? day : '0' + day;
+
+           month = (1 + date.getMonth()).toString();
+           month = month.length > 1 ? month : '0' + month;
+
+           year = date.getFullYear();
+           return day + '-' + month + '-' + year;
+       }
+    </script>
+
+  </head>
+
+  <body style="background-color: rgb(43, 82, 82); text-align: center">
+
+     <br>
+     <br>
+     <input type="button" value="Current Date" onClick="doCurrentDate()" />
+     <br>
+     <br>
+     <font color="red"><h1><div id="date" ></h1></div></font>
+
+  </body>
+
+</html>
+
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <script>
+       function doCurrentTime()
+       {
+           document.getElementById("time").innerHTML = getTime();
+       }
+
+       function getTime() {
+           var date = new Date();
+           var hour, minute, second;
+
+           hour = date.getHours().toString();
+           hour = hour.length > 1 ? hour : '0' + hour;
+
+           minute = (1 + date.getMinutes()).toString();
+           minute = minute.length > 1 ? minute : '0' + minute;
+
+           second = date.getSeconds().toString();
+           second = second.length > 1 ? second : '0' + second;
+
+           return hour + ':' + minute + ':' + second;
+       }
+    </script>
+  </head>
+
+  <body style="background-color: blueviolet; text-align: center">
+     <br>
+     <br>
+     <input type="button" value="Current Time" onClick="doCurrentTime()" />
+     <br>
+     <br>
+     <font color="red"><h1><div id="time" ></h1></div></font>
+  </body>
+</html>

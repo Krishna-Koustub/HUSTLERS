@@ -1,0 +1,41 @@
+<html>
+   <head>
+       <script>
+           function fn(n,par)
+           {
+              if ( n == 1 ) 
+              {
+                 document.getElementById('root1').innerHTML = par;
+              }
+
+              if ( n == 2 ) 
+              {
+                 document.getElementById('root2').innerHTML = par;
+              }
+
+              if ( n == 3 ) 
+              {
+                 document.getElementById('root3').innerHTML = par;
+              }
+
+           }
+       </script>
+   </head>
+
+   <body>
+      Division 1
+      <div id='root1'></div>
+
+      Division 2
+      <div id='root2'></div>
+
+      Division 3
+      <div id='root3'></div>
+
+
+      <input type="button" value="Good Morning" onClick="fn(1,'Good Morning')" />
+      <input type="button" value="Good Evening" onClick="fn(2,'Good Evening')" />
+      <input type="button" value="Good Night" onClick="fn(3,'Good Night')" />
+
+   </body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script language="JavaScript">
+            function doClose()
+            {
+                alert('inside doClose()');
+                opener.process(); 
+            }
+        </script>
+    </head>
+
+    <body>
+    <center>
+        This is a new window.
+        <br>
+        <br>
+        <input type="button" name="close" value="Close" onClick="return doClose()">
+    <center>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<html> 
+   <head> 
+   <script type="text/JavaScript" > 
+    function validate() 
+    { 
+         var zipCodeRegExpr = /^\d{3}\s\d{3}$/;
+         zipCode = document.zipCodeForm.zipCode.value; 
+         if ( !zipCodeRegExpr.test(zipCode) ) 
+         { 
+                 alert('Failed'); 
+         } 
+         else 
+         { 
+                alert('Passed'); 
+         }
+
+    } 
+   </script> 
+   </head>
+
+   <body> 
+   <center> 
+   <form name="zipCodeForm" onsubmit="return validate()" > 
+   Zip Code :  
+   <input type="text" name="zipCode" size="7" /> 
+   <br > 
+   <br > 
+   <input type="submit" value="Submit" /> 
+   </form> 
+   </center> 
+   </body>
+
+</html>

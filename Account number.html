@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <script language = "javascript">
+      function validate()
+      {
+        var accountNo;
+        accountNo=document.accountForm.accountNo.values;
+        if (accountNo=='')
+        {
+          alert("please eneter the account number:");
+          document.accountForm.accountNo.focus();
+          return false;
+        }
+        if (accountNo.length != 8)
+        {
+          alert('account number should have 8 digits ');
+          document.accountForm.accountNo.focus();
+          return false;
+        }
+        if (isNaN(accountNo))
+        {
+          alert('please eneter a numeric quantity ');
+          document.accountForm.accountNo.focus();
+          return false;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form name='accountForm'>
+    <center> 
+     </br>
+     </br>
+     <table>
+        <tr>
+          <td>Account Number :</td>
+          <td><input type="text" name="accountNo" size="10" /></td>
+        </tr>
+     </table>
+     </br>
+     </br>
+     <input type="button" value="Submit" onClick="return validate()">
+     </center>
+     </form>
+  </body>
+</html>

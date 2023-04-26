@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>  
+
+    <head>  
+       <script language="JavaScript">  
+         function validate()  
+         {  
+            if ( document.nameForm.firstName.value == '' )  
+            {  
+               alert('Please enter firstname');  
+               document.nameForm.firstName.focus();  
+               return false;  
+            }  
+
+            if ( document.nameForm.middleName.value == '' )  
+            {  
+               alert('Please enter middlename');  
+               document.nameForm.middleName.focus();  
+               return false;  
+            }  
+
+            if ( document.nameForm.lastName.value == '' )  
+            {  
+               alert('Please enter lastname');  
+               document.nameForm.lastName.focus();  
+               return false;  
+            }  
+        return true;  
+      }  
+
+      </script>  
+
+   </head>
+
+   <body style="text-align: center; background-color: cyan">  
+     <form name="nameForm" method="get" action="NameSuccess.html">  
+      </br>  
+      </br>  
+
+      <table border="1" style="margin: 0 auto" >  
+        <tr>  
+           <td>First Name</td>  
+           <td><input name="firstName" type="text" size="15" ></td>  
+        </tr>  
+        <tr>  
+           <td>Middle Name</td>  
+           <td><input name="middleName" type="text" size="15" ></td>  
+       </tr>  
+        <tr>  
+           <td>Last Name</td>  
+           <td><input name="lastName" type="text" size="15" ></td>  
+       </tr>  
+     </table>  
+     </br>  
+     </br>  
+
+     <input name="name" type="submit" value="Submit" onClick = "return validate()">  
+    </form>  
+  </body>  
+</html>

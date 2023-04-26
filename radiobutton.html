@@ -1,0 +1,98 @@
+<html>
+   <head>
+      <script language="JavaScript">
+         function validate()
+         {
+            alert('inside validate');
+            var l,i,flag;
+            flag = false;
+            l = document.qlnform.qln.length;
+            alert('No of radio buttons = ' + l);
+
+            for ( i = 0; i < l; i++ )
+            {
+               if ( document.qlnform.qln[i].checked )
+               {
+                 flag = true;
+                 exit;
+               }
+            }
+            if ( flag == false )
+            {
+               alert('Please select one qualification');
+               return false;
+            }
+            return true;
+        }
+     </script> 
+   </head>
+
+   <body>
+      <form name="qlnform" >
+          <table border="1">
+             <tr>
+                 <td>Qualification</td>
+                 <td>
+                 <input type="radio" name="qln" value="Matriculation">Matriculation<br>
+                 <input type="radio" name="qln" value="PUC">PUC<br>
+                 <input type="radio" name="qln" value="Graduate">Graduate<br>
+                 <input type="radio" name="qln" value="Post Graduate">Post Graduate<br>
+                 </td>
+            </tr>
+         </table>
+         <br>
+         <input type="button" name="insert" value="Insert" onClick = "return validate()">
+       </form>
+    </body>
+</html>
+
+
+
+<html>
+    <head>
+        <script language="JavaScript">
+            function validate()
+            {
+                alert('inside validate');
+                var l,i,flag;
+                var selectedQln;
+                flag = false;
+                l = document.qlnform.qln.length;
+                alert('No of radio buttons = ' + l);
+
+                for ( i = 0; i < l; i++ )
+                {
+                    if ( document.qlnform.qln[i].checked )
+                    {
+                        flag = true;
+                        selectedQln = document.qlnform.qln[i].value;
+                        break;
+                    }
+                }
+                if ( flag == false )
+                {
+                    alert('Please select one qualification');
+                    return false;
+                }
+
+                alert('Selected qualification = ' + selectedQln);
+                return true;
+            }
+        </script>
+    </head>
+
+    <body>
+        <form name="qlnform" >
+            <table border="1">
+                <tr>
+                    <td>Qualification</td>
+                    <td>
+                        <input type="radio" name="qln" value="Graduate">Graduate<br>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <input type="button" name="insert" value="Insert" onClick = "return validate()">
+        </form>
+    </body>
+</html>

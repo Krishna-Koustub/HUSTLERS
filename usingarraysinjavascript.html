@@ -1,0 +1,30 @@
+<!--it is used to create array in javascript but in cc club it is called colours -->
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+     <script>
+        function myArray()
+        {
+             var colors = ["red","yellow","blue","white","black"];
+             var i;
+             alert("No of elements : " + colors.length);  
+             for (i = 0; i < colors.length; i++ )
+                 alert(colors[i]);
+
+             colors.sort();
+             for (i = 0; i < colors.length; i++ )
+                 alert(colors[i]);
+        }
+     </script>
+
+  </head>
+
+  <body style="background-color: rgb(212, 173, 122); text-align: center" >
+     <br>
+     <br>
+     <input type="button" value="Colors" onClick="myArray()" />      
+  </body>
+
+</html>

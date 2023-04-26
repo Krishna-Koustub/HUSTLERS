@@ -1,0 +1,25 @@
+<html>  
+   <head>  
+      <title>ZIP VALIDATION</title>  
+      <script type="text/javascript">  
+        function CheckIndianZipCode(b)   
+    {  
+        var a = /(^\d{6}$)/;  
+        if (a.test(b))   
+        {  
+            alert("Your Entered Zip Code Is Valid.")  
+        }   
+        else   
+        {  
+            alert("Your Entered Zip Code Is Not Valid.")  
+        }  
+    };           
+      </script>  
+   </head>  
+   <body bgcolor= #D3D3D3 alink=blue vlink=blue>  
+      <FORM name="windowEvent">  
+         Enter String : <input type="text" name="txtOriginal" /><br>  
+         <input type="button" value="Check" name="btnIndianZipCode" onClick="CheckIndianZipCode(txtOriginal.value);" />  
+      </FORM>  
+   </body>  
+</html>

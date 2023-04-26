@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>  
+
+   <head>  
+      <script >  
+        function validate()  
+        {  
+           var dateRegExpr = /^\d{2}-\d{2}-\d{4}$/; 
+           var date = document.dateForm.date.value;  
+           if ( !dateRegExpr.test(date) )  
+           {  
+                 alert('Enter date in dd-mm-yyyy format'); 
+                 return false; 
+           }  
+           return true;
+        }  
+
+     </script>  
+   </head>
+
+   <body style="text-align: center; background-color: cyan">  
+     <br>
+     <br>
+     <form name="dateForm" method="get" action="DateSuccess.html" >  
+     Date :   
+     <input type="text" name="date" size="12" />  
+     <br >  
+     <br >  
+     <input type="submit" value="Submit" onClick="return validate()" />  
+     </form>  
+   </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html> 
+  <head> 
+    <script> 
+       function validate() 
+       { 
+           var i,l,flag; 
+           flag = false; 
+           alert('Inside validate'); 
+           l = document.programmingLanguagesForm.language.length; 
+           alert('No of check boxes = ' + l); 
+           for ( i = 0; i < l; i++ ) 
+           { 
+               if ( document.programmingLanguagesForm.language[i].checked ) 
+               { 
+                   flag = true; 
+                   exit; 
+               } 
+           } 
+
+           if ( flag == false ) 
+           { 
+               alert('Please select a check box'); 
+               return false; 
+           } 
+
+           return true; 
+      } 
+   </script> 
+  </head>
+
+  <body style="background-color: cyan; text-align: center" > 
+
+     <br> 
+     <br>
+     <h2>Programming Languages</h2> 
+     <br> 
+     <br>
+     <form name="programmingLanguagesForm" method="get" action="ProgrammingLanguagesSuccess.html"> 
+         Programming Languages : 
+         <input type="checkbox" name="language" value="JV" />Java
+         <input type="checkbox" name="language" value="PY" />Python
+         <input type="checkbox" name="language" value="PH" />PHP
+         <input type="checkbox" name="language" value="FR" />Fortran
+         <br>
+         <br>
+         <input type="submit" value="Submit" onClick="return validate()">
+    </form> 
+  </body> 
+</html>

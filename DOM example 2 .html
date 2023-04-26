@@ -1,0 +1,30 @@
+<html>
+   <head>
+       <script>
+           function fn1()
+           {
+              document.getElementById('root').innerHTML = "Good Morning";
+           }
+
+           function fn2()
+           {
+              document.getElementById('root').innerHTML = "Good Afternoon ";
+           }
+
+           function fn3()
+           {
+              document.getElementById('root').innerHTML = "Good Night";
+           }
+
+
+       </script>
+   </head>
+
+   <body>
+      <div id='root'></div>
+      <input type="button" value="AM" onClick="fn1()" />
+      <input type="button" value="NOON" onClick="fn2()" />
+      <input type="button" value="PM" onClick="fn3()" />
+
+   </body>
+</html>

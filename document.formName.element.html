@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <script>
+            function fn()
+            {
+                if ( document.pinCodeForm.pinCode.value == '' )
+                {
+                    alert("Please enter pin code ...");
+                    return false;
+                }
+
+                if ( document.pinCodeForm.pinCode.value.length != 6 )
+                {
+                    alert("Please enter pin code with length 6");
+                    return false;
+                }
+
+                document.pinCodeForm.submit();
+            }
+        </script>
+    </head>
+
+    <body>
+
+        <br>
+        <br>
+        <form name="pinCodeForm" method="GET" action="Success.html" >
+            Pin Code :
+            <input type="text" name="pinCode" size="20" />
+            <br>
+            <br>
+            <input type="button" value="Submit" onClick="fn()" />
+        </form>
+    </body>
+
+</html>
+
+<!-- example for document.<formName>.<element>. -->

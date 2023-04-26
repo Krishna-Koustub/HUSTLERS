@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <script language="JavaScript">
+            var win;
+            function doNewWindow()
+            {
+                alert('Opens a new popup window');
+                win = window.open("Second.html","This is a new popup window",
+                    "height=500, width=600, menubar=yes, toolbar=yes");
+            }
+
+            function process()
+            {
+                win.close();
+            }
+        </script>
+    </head>
+
+    <body>
+    <center>
+        <br>
+        <br>
+        <br>
+        <input type="button" name="newWindow" value="Open a new window" onClick="return doNewWindow()">
+    </center>
+    </body>
+</html>
+
+Second.html
+
+<html>
+    <head>
+        <script language="JavaScript">
+            function doClose()
+            {
+                alert('inside doClose()');
+                opener.process(); 
+            }
+        </script>
+    </head>
+
+    <body>
+    <center>
+        This is a new window.
+        <br>
+        <br>
+        <input type="button" name="close" value="Close" onClick="return doClose()">
+    <center>
+    </body>
+</html>
